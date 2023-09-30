@@ -4,13 +4,14 @@ void printMenu();
 void calculateAggregate(string name,float matricMarks,float interMarks,float ecatMarks);
 void compareMarks(string nameStd1,int ecatMarksStd1,string nameStd2,int ecatMarksStd2);
 main()
-{	printMenu();
+{	system("color 02");
+	printMenu();
 	string name1,name2;
 	float interMarks,matricMarks,ecatMarks;int std1,std2;
-	char a;
-	cout<<"To calculate aggregate press 'c' OR To compare marks press 'm': ";
+	int a;
+	cout<<"To calculate aggregate press '1' OR To compare marks press '2': ";
 	cin>>a;
-	if(a=='c')
+	if(a==1)
 {
 	
 	cout<<"Enter your name: "<<name1;
@@ -23,7 +24,7 @@ main()
 	cin>>ecatMarks;
 	calculateAggregate(name1,matricMarks,interMarks,ecatMarks);
 }
-	if(a=='m'){
+	if(a==2){
 	cout<<"Enter 1st student name: ";
 	cin>>name1;
 	cout<<"Enter 2nd student name: ";
@@ -66,7 +67,7 @@ void calculateAggregate(string name,float matricMarks,float interMarks,float eca
 {
 	float marks=((matricMarks/1100)*0.3)+((interMarks/550)*0.3)+((ecatMarks/400)*0.4);
 	float aggregate=marks*100;
-	cout<<"Aggregate is: "<<aggregate;
+	cout<<"Aggregate is: "<<aggregate<<endl;
 }
 void compareMarks(string nameStd1,int ecatMarksStd1,string nameStd2,int ecatMarksStd2){
 	int roll_1=1,roll_2=2;
